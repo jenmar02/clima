@@ -4,57 +4,66 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Clima App</title>
+    <link rel="stylesheet" href="src/index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <header>
-      <h1>Good Evening! 🌆</h1>
-      <form>
-        <input type="search" placeholder="Enter a city..." required />
-        <input type="submit" value="search" />
-      </form>
-    </header>
-    <main>
-      <div>
-        <h1>Paris</h1>
-        <p>
-          Tuesday 14:49, scattered clouds
-          <br />
-          Precipitation: 0%, Humidity: 66%, Wind: 3.13 km/h
-        </p>
-      </div>
-      <div>🌤️ 12°C</div>
-      <ul>
-        <li>
-          Wed 🌤️
-          <strong>20°</strong>/ 14°
-        </li>
-        <li>
-          Thu ☁️
-          <strong>19°</strong>/ 15°
-        </li>
-        <li>
-          Fri 🌧️
-          <strong>18°</strong>/ 15°
-        </li>
-        <li>
-          Sat 🌧️
-          <strong>17°</strong>/ 15°
-        </li>
-        <li>
-          Sun ☁️
-          <strong>19°</strong>/ 12°
-        </li>
-      </ul>
-    </main>
-    <footer>
-      Coded by
-      <a href="https://github.com/jenmar02" target="_blank"
-        >Jennifer Martinez</a
-      >
-      ,is open-sourced on
-      <a href="https://github.com/jenmar02/clima" target="_blank">GitHub</a>
-      and hosted on
-      <a href="https://clima-preciso.netlify.app/" target="_blank">Netlify</a>
-    </footer>
+    <div class="weather-app">
+      <header>
+        <h1>Good Evening! 🌆</h1>
+        <form>
+          <input type="search" placeholder="Enter a city..." required />
+          <input type="submit" value="search" />
+        </form>
+      </header>
+      <main>
+        <div>
+          <h1>Paris</h1>
+          <p>
+            Tuesday 14:49, scattered clouds
+            <br />
+            Precipitation: 0%, Humidity: 66%, Wind: 3.13 km/h
+          </p>
+        </div>
+        <div>🌤️ 12°C</div>
+        <ul>
+          <li>
+            Wed 🌤️
+            <strong>20°</strong>/ 14°
+          </li>
+          <li>
+            Thu ☁️
+            <strong>19°</strong>/ 15°
+          </li>
+          <li>
+            Fri 🌧️
+            <strong>18°</strong>/ 15°
+          </li>
+          <li>
+            Sat 🌧️
+            <strong>17°</strong>/ 15°
+          </li>
+          <li>
+            Sun ☁️
+            <strong>19°</strong>/ 12°
+          </li>
+        </ul>
+      </main>
+      <footer>
+        Coded by
+        <a href="https://github.com/jenmar02" target="_blank"
+          >Jennifer Martinez</a
+        >
+        ,is open-sourced on
+        <a href="https://github.com/jenmar02/clima" target="_blank">GitHub</a>
+        and hosted on
+        <a href="https://clima-preciso.netlify.app/" target="_blank">Netlify</a>
+      </footer>
+    </div>
   </body>
 </html>
