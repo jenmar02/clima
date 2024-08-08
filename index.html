@@ -34,11 +34,16 @@
           <div>
             <h1 class="weather-city" id="weather-city"></h1>
             <p class="weather-app-details">
-              Tuesday 14:49, scattered clouds
+              <span id="date"></span>,
+              <span id="description"></span>
               <br />
               Humidity:
-              <strong class="pink-bold">66%</strong>, Wind:
-              <strong class="pink-bold">3.13 km/h</strong>
+              <strong class="pink-bold"
+                ><span id="humidity-element"></span>%</strong
+              >, Wind:
+              <strong class="pink-bold"
+                ><span id="wind-element"></span> km/h</strong
+              >
             </p>
           </div>
           <div class="weather-app-temp-container">
@@ -46,6 +51,9 @@
             <div class="weather-app-temp" id="temp">12</div>
             <div class="weather-app-unit">°C</div>
           </div>
+        </div>
+        <div class="unit-change">
+          <span class="celsius">°C</span>|<span class="fahrenheit">°F</span>
         </div>
         <ul class="day-list">
           <li class="day-container">

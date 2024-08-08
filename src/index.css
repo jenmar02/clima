@@ -33,6 +33,7 @@ a {
   font-weight: bolder;
 }
 .weather-icon {
+
   font-size: 25px;
   margin-top: 10px;
 }
@@ -63,12 +64,15 @@ a {
 }
 .weather-app-icon {
   font-size: 44px;
-  margin-left: 10px;
+  margin-right: 15px;
   margin-top: 22px;
 }
 .weather-app-unit {
   margin-top: 16px;
   font-size: 28px;
+}
+.unit-change {
+  display: flex;
 }
 .greeting {
   text-align: center;
