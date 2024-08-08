@@ -15,42 +15,70 @@
   <body>
     <div class="weather-app">
       <header>
-        <h1>Good Evening! 🌆</h1>
-        <form>
-          <input type="search" placeholder="Enter a city..." required />
-          <input type="submit" value="search" />
+        <h1 class="greeting">Good Evening! 🌆</h1>
+        <form class="search-form">
+          <input
+            type="search"
+            placeholder="Enter a city..."
+            required
+            class="search-form-input"
+          />
+          <input type="submit" value="search" class="search-form-button" />
         </form>
       </header>
       <main>
-        <div>
-          <h1>Paris</h1>
-          <p>
-            Tuesday 14:49, scattered clouds
-            <br />
-            Precipitation: 0%, Humidity: 66%, Wind: 3.13 km/h
-          </p>
+        <div class="weather-app-data">
+          <div>
+            <h1 class="weather-city">Paris</h1>
+            <p class="weather-app-details">
+              Tuesday 14:49, scattered clouds
+              <br />
+              Precipitation: <strong class="pink-bold">0%</strong>, Humidity:
+              <strong class="pink-bold">66%</strong>, Wind:
+              <strong class="pink-bold">3.13 km/h</strong>
+            </p>
+          </div>
+          <div class="weather-app-temp-container">
+            <div class="weather-app-icon">🌤️</div>
+            <div class="weather-app-temp">12</div>
+            <div class="weather-app-unit">°C</div>
+          </div>
         </div>
-        <div>🌤️ 12°C</div>
-        <ul>
-          <li>
-            Wed 🌤️
-            <strong>20°</strong>/ 14°
+        <ul class="day-list">
+          <li class="day-container">
+            <span class="day-name">Wed</span>
+            <span class="weather-icon">🌤️</span>
+            <span class="hi-low-temp"
+              ><strong class="pink-bold">20°</strong>/ 14°</span
+            >
           </li>
-          <li>
-            Thu ☁️
-            <strong>19°</strong>/ 15°
+          <li class="day-container">
+            <span class="day-name">Thu</span>
+            <span class="weather-icon">☁️</span>
+            <span class="hi-low-temp"
+              ><strong class="pink-bold">19°</strong>/ 15°</span
+            >
           </li>
-          <li>
-            Fri 🌧️
-            <strong>18°</strong>/ 15°
+          <li class="day-container">
+            <span class="day-name">Fri</span>
+            <span class="weather-icon">🌧️</span>
+            <span class="hi-low-temp"
+              ><strong class="pink-bold">18°</strong>/ 15°</span
+            >
           </li>
-          <li>
-            Sat 🌧️
-            <strong>17°</strong>/ 15°
+          <li class="day-container">
+            <span class="day-name">Sat</span>
+            <span class="weather-icon">🌧️</span>
+            <span class="hi-low-temp"
+              ><strong class="pink-bold">17°</strong>/ 15°</span
+            >
           </li>
-          <li>
-            Sun ☁️
-            <strong>19°</strong>/ 12°
+          <li class="day-container">
+            <span class="day-name">Sun</span>
+            <span class="weather-icon">☁️</span>
+            <span class="hi-low-temp"
+              ><strong class="pink-bold">19°</strong>/ 12°</span
+            >
           </li>
         </ul>
       </main>
