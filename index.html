@@ -16,12 +16,13 @@
     <div class="weather-app">
       <header>
         <h1 class="greeting">Good Evening! 🌆</h1>
-        <form class="search-form">
+        <form class="search-form" id="search-form">
           <input
             type="search"
             placeholder="Enter a city..."
             required
             class="search-form-input"
+            id="search-form-input"
           />
           <input type="submit" value="search" class="search-form-button" />
         </form>
@@ -29,7 +30,7 @@
       <main>
         <div class="weather-app-data">
           <div>
-            <h1 class="weather-city">Paris</h1>
+            <h1 class="weather-city" id="weather-city">Paris</h1>
             <p class="weather-app-details">
               Tuesday 14:49, scattered clouds
               <br />
@@ -93,5 +94,6 @@
         <a href="https://clima-preciso.netlify.app/" target="_blank">Netlify</a>
       </footer>
     </div>
+    <script src="src/index.js"></script>
   </body>
 </html>
