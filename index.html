@@ -15,9 +15,10 @@
     <title>Clima App</title>
   </head>
   <body>
+    <button class="theme-button">Change Theme</button>
     <div class="weather-app">
       <header>
-        <h1 class="greeting">Good Evening! 🌆</h1>
+        <h1 class="greeting">Good Evening!</h1>
         <form class="search-form" id="search-form">
           <input
             type="search"
@@ -26,7 +27,7 @@
             class="search-form-input"
             id="search-form-input"
           />
-          <input type="submit" value="search" class="search-form-button" />
+          <input type="submit" value="Search" class="search-form-button" />
         </form>
       </header>
       <main>
@@ -42,7 +43,8 @@
                 ><span id="humidity-element"></span>%</strong
               >, Wind:
               <strong class="pink-bold"
-                ><span id="wind-element"></span> km/h</strong
+                ><span id="wind-element"></span>
+                <span id="wind-unit">km/h</span></strong
               >
             </p>
           </div>
@@ -54,12 +56,13 @@
                 class="weather-app-icon"
               />
             </div>
-            <div class="weather-app-temp" id="temp">12</div>
+            <div class="weather-app-temp" id="temp"></div>
             <div class="weather-app-unit">°C</div>
           </div>
         </div>
-        <div class="unit-change">
-          <span class="celsius">°C</span>|<span class="fahrenheit">°F</span>
+        <div class="unit-change-buttons">
+          <button class="celsius-button">°C</button> |
+          <button class="fahrenheit-button">°F</button>
         </div>
         <ul class="day-list">
           <li class="day-container">

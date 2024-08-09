@@ -1,4 +1,26 @@
+function changeTheme() {
+  let body = document.querySelector("body");
+  body.classList.toggle("dark");
+}
+
+let themeButton = document.querySelector(".theme-button");
+themeButton.addEventListener("click", changeTheme);
+
+function changeGreeter() {
+  let greeter = document.querySelector(".greeting");
+  let date = new Date();
+  if (date.getHours() < 13) {
+    greeter.innerHTML = `Good Morning!`;
+  } else if (date.getHours() < 17 && date.getHours() >= 13) {
+    greeter.innerHTML = `Good Afternoon!`;
+  } else {
+    greeter.innerHTML = `Good Evening!`;
+  }
+}
+
 function refreshWeather(response) {
+  changeGreeter();
+
   let tempElement = document.querySelector("#temp");
   let searchTemp = response.data.temperature.current;
   let cityElement = document.querySelector("#weather-city");
@@ -46,10 +68,29 @@ function formateDate(date) {
 }
 function searchCity(city) {
   let apiKey = "e49t4e467d35faocb8ec3a1644a604fa";
-  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=${changeUnit()}`;
 
   axios.get(apiUrl).then(refreshWeather);
 }
+
+function changeUnit() {
+  let unitSwitch = document.querySelector(".unit-change-buttons");
+
+  if (degFah.value === true) {
+    let windUnit = document.querySelector("#wind-unit");
+    windUnit.innerHTML = `m/h`;
+    return `imperial`;
+  } else if (degCel === true) {
+    return `metric`;
+  } else {
+    return `metric`;
+  }
+}
+let degCel = document.querySelector(".celsius-button");
+degCel.addEventListener("click", changeUnit);
+let degFah = document.querySelector(".fahrenheit-button");
+degFah.addEventListener("click", changeUnit);
+
 function handleSearch(event) {
   event.preventDefault();
   let searchInput = document.querySelector("#search-form-input");
