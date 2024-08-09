@@ -32,7 +32,8 @@ button {
   color: white;
 }
 .theme-button:hover {
-  background: #90a8d0;
+  background: #dbc1ca;
+  color: black;
   cursor: pointer;
 }
 .dark {
