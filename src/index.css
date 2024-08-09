@@ -62,36 +62,6 @@ a {
   color: white;
 }
 /*
-.day-list {
-  display: grid;
-  gap: 10px;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  list-style: none;
-  padding: 0;
-}
-.day-container {
-  font-weight: 300;
-  font-size: 16px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 10px;
-  margin-right: 50px;
-}
-.day-name {
-  font-weight: bolder;
-}
-.weather-icon {
-
-  font-size: 25px;
-  margin-top: 10px;
-}
-.hi-low-temp {
-  font-size: 14px;
-  margin-top: 10px;
-  color: gray;
-  margin-right: 200px;
-}
 */
 .weather-city {
   margin: 0;
