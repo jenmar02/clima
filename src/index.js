@@ -32,23 +32,19 @@ function refreshWeather(response) {
   let icon = document.querySelector("#icon");
 
   cityElement.innerHTML = response.data.city;
-  tempElement.innerHTML = Math.round(searchTemp);
+  timeElement.innerHTML = formateDate(date);
   descriptionElement.innerHTML = response.data.condition.description;
   humidityElement.innerHTML = response.data.temperature.humidity;
   windSpeed.innerHTML = Math.round(response.data.wind.speed);
-  timeElement.innerHTML = formateDate(date);
-
-  icon.innerHTML = ` <img
-                src="${response.data.condition.icon_url}"
-                class="weather-app-icon"
-              />`;
+  tempElement.innerHTML = Math.round(searchTemp);
+  icon.innerHTML = ` <img src="${response.data.condition.icon_url}" class="weather-app-icon"/>`;
 
   getForecast(response.data.city);
 }
 
 function formateDate(date) {
   let minutes = date.getMinutes();
-  let hour = date.getHours();
+  let hours = date.getHours();
 
   let days = [
     "Sunday",
@@ -66,7 +62,7 @@ function formateDate(date) {
     minutes = `0${minutes}`;
   }
 
-  return `${day} ${hour}:${minutes}`;
+  return `${day} ${hours}:${minutes}`;
 }
 
 function formateDay(timestamp) {
@@ -120,9 +116,7 @@ function displayForecast(response) {
 
   response.data.daily.forEach(function (day, index) {
     if (index < 5) {
-      forecastHtml =
-        forecastHtml +
-        `<div class="weather-forecast-day">
+      forecastHtml += `<div class="weather-forecast-day">
             <div class="weather-forecast-date">${formateDay(day.time)}</div>
               <div><img src="${
                 day.condition.icon_url
