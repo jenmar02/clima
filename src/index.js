@@ -49,13 +49,13 @@ function formateDate(date) {
   let hour = date.getHours();
 
   let days = [
+    "Sunday",
     "Monday",
     "Tuesday",
     "Wednesday",
     "Thursday",
     "Friday",
     "Saturday",
-    "Sunday",
   ];
 
   let day = days[date.getDay()];
@@ -98,7 +98,32 @@ function handleSearch(event) {
   searchCity(searchInput.value);
 }
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let days = ["Sun", "Mon", "Tue", "Thu", "Fri"];
+  let forecastHtml = "";
+
+  days.forEach(function (day) {
+    forecastHtml =
+      forecastHtml +
+      `<div class="weather-forecast-day">
+    <div class="weather-forecast-date">${day}</div>
+    <div class="forecast-icon">🌤️</div>
+    <div class="forecast-temperature">
+      <div class="forecast-temp">
+        <strong>15°</strong>
+      </div>
+      <div class="forecast-temp">9°</div>
+    </div>
+  </div>`;
+  });
+
+  forecastElement.innerHTML = forecastHtml;
+}
+
 let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", handleSearch);
 
 searchCity("Austin");
+displayForecast();
