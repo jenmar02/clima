@@ -68,12 +68,12 @@ function formateDate(date) {
 }
 function searchCity(city) {
   let apiKey = "e49t4e467d35faocb8ec3a1644a604fa";
-  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=${changeUnit()}`;
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
 
   axios.get(apiUrl).then(refreshWeather);
 }
 
-function changeUnit() {
+/*function changeUnit() {
   let unitSwitch = document.querySelector(".unit-change-buttons");
 
   if (degFah.value === true) {
@@ -89,7 +89,7 @@ function changeUnit() {
 let degCel = document.querySelector(".celsius-button");
 degCel.addEventListener("click", changeUnit);
 let degFah = document.querySelector(".fahrenheit-button");
-degFah.addEventListener("click", changeUnit);
+degFah.addEventListener("click", changeUnit);*/
 
 function handleSearch(event) {
   event.preventDefault();

@@ -61,8 +61,6 @@ a {
   background-color: #7c97ad;
   color: white;
 }
-/*
-*/
 .weather-city {
   margin: 0;
   font-size: 38px;
@@ -91,13 +89,31 @@ a {
   margin-top: 16px;
   font-size: 28px;
 }
-.unit-change-buttons {
+.weather-forecast {
   display: flex;
-  margin-left: 500px;
-  margin-top: -35px;
+  justify-content: space-around;
+  margin-top: 30px;
 }
-.unit-change-buttons:hover {
+.weather-forecast-date {
+  text-align: center;
+  color: rgba(39, 33, 66, 0.4);
+  font-size: 16px;
+  line-height: 20px;
+  margin-bottom: 10px;
+}
+.forecast-icon {
+  font-size: 38px;
+  text-align: center;
+}
+.forecast-temperature {
+  text-align: center;
   color: #f65282;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+}
+.forecast-temp {
+  padding: 0 10px;
 }
 .greeting {
   text-align: center;
