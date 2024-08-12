@@ -42,6 +42,8 @@ function refreshWeather(response) {
                 src="${response.data.condition.icon_url}"
                 class="weather-app-icon"
               />`;
+
+  getForecast("response.data");
 }
 
 function formateDate(date) {
@@ -98,10 +100,18 @@ function handleSearch(event) {
   searchCity(searchInput.value);
 }
 
-function displayForecast() {
+function getForecast(city) {
+  let apiKey = "e49t4e467d35faocb8ec3a1644a604fa";
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=metric`;
+
+  axios(apiUrl).then(displayForecast);
+}
+
+function displayForecast(response) {
+  console.log(response.data);
   let forecastElement = document.querySelector("#forecast");
 
-  let days = ["Sun", "Mon", "Tue", "Thu", "Fri"];
+  let days = ["Sun", "Mon", "Tue", "Thu", "Fri", "Sat"];
   let forecastHtml = "";
 
   days.forEach(function (day) {
@@ -126,4 +136,3 @@ let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", handleSearch);
 
 searchCity("Austin");
-displayForecast();

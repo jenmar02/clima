@@ -5,6 +5,7 @@ body {
     rgb(247, 202, 201) 44.9%,
     rgb(145, 168, 208) 96.1%
   );
+  background-attachment: fixed;
   font-family: "Roboto", sans-serif;
 }
 header {
@@ -38,6 +39,7 @@ button {
 }
 .dark {
   background: linear-gradient(to top, #09203f 0%, #537895 100%);
+  background-attachment: fixed;
 }
 .dark .weather-app {
   background: lightgray;
@@ -58,8 +60,8 @@ a {
   background-color: #385774;
 }
 .dark .search-form-input {
-  background-color: #7c97ad;
-  color: white;
+  background-color: #e7f0fe;
+  color: black;
 }
 .weather-city {
   margin: 0;
