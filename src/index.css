@@ -15,7 +15,7 @@ header {
 main {
   padding: 30px 0;
 }
-a {
+.link-pink {
   color: #f65282;
 }
 button {
@@ -52,8 +52,10 @@ button {
 .dark .theme-button:hover {
   background: #3f7088;
 }
-.dark .pink-bold,
-a {
+.dark .pink-bold {
+  color: #385774;
+}
+.dark .link-pink {
   color: #385774;
 }
 .dark .search-form-button {
@@ -63,6 +65,7 @@ a {
   background-color: #e7f0fe;
   color: black;
 }
+
 .weather-city {
   margin: 0;
   font-size: 38px;

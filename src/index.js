@@ -74,28 +74,10 @@ function formateDay(timestamp) {
 
 function searchCity(city) {
   let apiKey = "e49t4e467d35faocb8ec3a1644a604fa";
-  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=imperial`;
 
   axios.get(apiUrl).then(refreshWeather);
 }
-
-/*function changeUnit() {
-  let unitSwitch = document.querySelector(".unit-change-buttons");
-
-  if (degFah.value === true) {
-    let windUnit = document.querySelector("#wind-unit");
-    windUnit.innerHTML = `m/h`;
-    return `imperial`;
-  } else if (degCel === true) {
-    return `metric`;
-  } else {
-    return `metric`;
-  }
-}
-let degCel = document.querySelector(".celsius-button");
-degCel.addEventListener("click", changeUnit);
-let degFah = document.querySelector(".fahrenheit-button");
-degFah.addEventListener("click", changeUnit);*/
 
 function handleSearch(event) {
   event.preventDefault();
@@ -106,7 +88,7 @@ function handleSearch(event) {
 
 function getForecast(city) {
   let apiKey = "e49t4e467d35faocb8ec3a1644a604fa";
-  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=metric`;
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=imperial`;
 
   axios(apiUrl).then(displayForecast);
 }
